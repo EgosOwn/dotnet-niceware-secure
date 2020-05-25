@@ -6,8 +6,6 @@ namespace niceware
 {
     public static partial class Niceware
     {
-        private static Random _random = new Random((int)DateTime.Now.Ticks);
-        
         /// <summary>Maximum number of bytes for a passphrase</summary>
         public const int MaxPassphraseSize = 1024;
 
@@ -51,10 +49,12 @@ namespace niceware
             }
 
             var bytes = new Byte[size];
-            _random.NextBytes(bytes);
+            var rng = System.Security.Cryptography.RandomNumberGenerator.Create();
+            rng.GetBytes(bytes);
+            rng.Dispose();
             return new Tuple<List<string>, byte[]>(bytes.ToPassphrase(), bytes);
         }
-        
+
         /// <summary>Converts a phrase back into the original byte array</summary>
         /// <param name="passphrase">Passphrase</param>
         /// <returns>Array of bytes</returns>
