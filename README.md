@@ -14,7 +14,7 @@ To Install:
 
 Install via Nuget package manager:
 ```
-PM> Install-Package niceware
+PM> Install-Package NicewareSecure
 ```
 
 To generate an 8-byte passphrase:
@@ -30,3 +30,6 @@ var passphrase = Niceware.GeneratePassphrase(8);
 
 ## Credits
 Niceware for .NET is a port of [Niceware](https://github.com/diracdeltas/niceware) by [yan](https://diracdeltas.github.io/blog/about/)
+
+**This C# port is a fork of [trpalmer's dotnet-niceware](https://github.com/trpalmer/dotnet-niceware)**
+
