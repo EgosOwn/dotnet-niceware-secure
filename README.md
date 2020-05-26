@@ -6,6 +6,8 @@ Because the wordlist is of exactly size 2^16, Niceware is also useful for conver
 * Free software: MIT license
 * Supports .NET Standard (core), .NET 4.6
 
+**This C# port is a fork of [trpalmer's dotnet-niceware](https://github.com/trpalmer/dotnet-niceware)**
+
 ## Usage
 
 To Install:
